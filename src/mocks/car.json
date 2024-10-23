@@ -1,0 +1,19 @@
+{
+  "brand": "Nissan",
+  "model": "Leaf",
+  "color": "White",
+  "registerNumber": "SSJ-3002",
+  "years": 2019,
+  "price": 29000,
+  "_links": {
+    "self": {
+      "href": "http://localhost:8081/api/cars/2"
+    },
+    "car": {
+      "href": "http://localhost:8081/api/cars/2"
+    },
+    "owner": {
+      "href": "http://localhost:8081/api/cars/2/owner"
+    }
+  }
+}

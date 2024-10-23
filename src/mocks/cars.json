@@ -1,0 +1,74 @@
+{
+  "_embedded": {
+    "cars": [
+      {
+        "brand": "Ford",
+        "model": "Mustang",
+        "color": "Red",
+        "registerNumber": "ADF-1121",
+        "years": 2021,
+        "price": 59000,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8081/api/cars/1"
+          },
+          "car": {
+            "href": "http://localhost:8081/api/cars/1"
+          },
+          "owner": {
+            "href": "http://localhost:8081/api/cars/1/owner"
+          }
+        }
+      },
+      {
+        "brand": "Nissan",
+        "model": "Leaf",
+        "color": "White",
+        "registerNumber": "SSJ-3002",
+        "years": 2019,
+        "price": 29000,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8081/api/cars/2"
+          },
+          "car": {
+            "href": "http://localhost:8081/api/cars/2"
+          },
+          "owner": {
+            "href": "http://localhost:8081/api/cars/2/owner"
+          }
+        }
+      },
+      {
+        "brand": "Toyota",
+        "model": "Prius",
+        "color": "Silver",
+        "registerNumber": "KKO-0212",
+        "years": 2020,
+        "price": 39000,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8081/api/cars/3"
+          },
+          "car": {
+            "href": "http://localhost:8081/api/cars/3"
+          },
+          "owner": {
+            "href": "http://localhost:8081/api/cars/3/owner"
+          }
+        }
+      }
+    ]
+  },
+  "_links": {
+    "self": {
+      "href": "http://localhost:8081/api/cars"
+    },
+    "profile": {
+      "href": "http://localhost:8081/api/profile/cars"
+    },
+    "search": {
+      "href": "http://localhost:8081/api/cars/search"
+    }
+  }
+}
