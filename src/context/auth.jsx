@@ -6,6 +6,7 @@ export const AuthContext = createContext();
 export function AuthProvider({ children }) {
   const [token, setToken] = useState(sessionStorage.getItem('jwt'));
   const [isAuthenticated, setAuthenticated] = useState(token);
+  const [error, setError] = useState(false);
 
   const signIn = async (user) => {
     try {
@@ -14,8 +15,11 @@ export function AuthProvider({ children }) {
       if (jwt) {
         setToken(jwt); // Actualiza el estado del token
         setAuthenticated(true); // Autenticación exitosa
+      } else {
+        setError(true); // Muestra mensaje de error
       }
     } catch (error) {
+      setError(true); // Muestra mensaje de error
       console.error('Login failed', error); // Manejo de error en inicio de sesión
       setAuthenticated(false); // Autenticación fallida
     }
@@ -29,7 +33,15 @@ export function AuthProvider({ children }) {
 
   return (
     <AuthContext.Provider
-      value={{ isAuthenticated, token, setAuthenticated, signIn, logOut }}
+      value={{
+        isAuthenticated,
+        token,
+        setAuthenticated,
+        signIn,
+        logOut,
+        error,
+        setError,
+      }}
     >
       {children}
     </AuthContext.Provider>

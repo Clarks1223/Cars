@@ -6,11 +6,12 @@ import { useState } from 'react';
 
 export function Login() {
   const [user, setUser] = useState({ username: '', password: '' });
-  const [error, setError] = useState(false);
-  const { signIn, isAuthenticated, logOut } = useAuth();
+  const { signIn, isAuthenticated, logOut, error, setError } = useAuth();
+
   const login = () => {
     signIn(user);
   };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUser((prevState) => ({
